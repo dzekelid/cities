@@ -1,10 +1,11 @@
 ---
 swagger: "2.0"
 x-collection-name: Weatherbit.io
-x-complete: 1
+x-complete: 0
 info:
-  title: Weatherbit
-  description: this-is-the-documentation-for-the-weatherbit-api---the-base-url-for-the-api-is-httpapi-weatherbit-iov2-0httpapi-weatherbit-iov2-0-or-httpsapi-weatherbit-iov2-0httpapi-weatherbit-iov2-0--below-is-the-swagger-ui-documentation-for-the-api--all-api-requests-require-the-key-parameter---------an-example-for-a-5-day-forecast-for-london-uk-would-be-httpapi-weatherbit-iov2-0forecast3hourlycitylondoncountryuk
+  title: Weatherbit Get History Hourly City
+  description: Returns Historical Observations - Given a City ID. **(LIMIT 1 day for
+    Low Volume plans. LIMIT 7 days for Basic/Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**
   version: 2.0.0
 host: api.weatherbit.io
 basePath: /v2.0
@@ -613,4 +614,17 @@ paths:
       - City
       - ""
       - City
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---

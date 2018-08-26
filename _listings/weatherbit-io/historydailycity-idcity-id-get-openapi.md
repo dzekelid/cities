@@ -1,10 +1,11 @@
 ---
 swagger: "2.0"
 x-collection-name: Weatherbit.io
-x-complete: 1
+x-complete: 0
 info:
-  title: Weatherbit
-  description: this-is-the-documentation-for-the-weatherbit-api---the-base-url-for-the-api-is-httpapi-weatherbit-iov2-0httpapi-weatherbit-iov2-0-or-httpsapi-weatherbit-iov2-0httpapi-weatherbit-iov2-0--below-is-the-swagger-ui-documentation-for-the-api--all-api-requests-require-the-key-parameter---------an-example-for-a-5-day-forecast-for-london-uk-would-be-httpapi-weatherbit-iov2-0forecast3hourlycitylondoncountryuk
+  title: Weatherbit Get History Daily City
+  description: Returns Historical Observations - Given a City ID. **(LIMIT 1 day for
+    Low Volume plans. LIMIT 7 days for Basic/Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**
   version: 2.0.0
 host: api.weatherbit.io
 basePath: /v2.0
@@ -525,92 +526,17 @@ paths:
       - City
       - ""
       - City
-  /history/hourly?city={city}&country={country}:
-    get:
-      summary: Get History Hourly City & Country
-      description: Returns Historical Observations - Given a city in the format of
-        City,ST or City. The state, and country parameters can be provided to make
-        the search more accurate. **(LIMIT 1 day for Low Volume plans. LIMIT 7 days
-        for Basic/Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**
-      operationId: returns-historical-observations--given-a-city-in-the-format-of-cityst-or-city-the-state-and-country-
-      x-api-path-slug: historyhourlycitycitycountrycountry-get
-      parameters:
-      - in: query
-        name: callback
-        description: Wraps return in jsonp callback
-      - in: path
-        name: city
-        description: City search
-      - in: path
-        name: country
-        description: Country Code (2 letter)
-      - in: query
-        name: end_date
-        description: End Date (YYYY-MM-DD or YYYY-MM-DD:HH)
-      - in: query
-        name: key
-        description: Your registered API key
-      - in: query
-        name: lang
-        description: 'Language (Default: English) See language field description'
-      - in: query
-        name: start_date
-        description: Start Date (YYYY-MM-DD or YYYY-MM-DD:HH)
-      - in: query
-        name: state
-        description: Full name of state
-      - in: query
-        name: units
-        description: Convert to units
-      responses:
-        200:
-          description: OK
-      tags:
-      - Weather
-      - History
-      - Hourly
-      - City
-      - City
-      - '&country'
-      - Country
-  /history/hourly?city_id={city_id}:
-    get:
-      summary: Get History Hourly City
-      description: Returns Historical Observations - Given a City ID. **(LIMIT 1 day
-        for Low Volume plans. LIMIT 7 days for Basic/Developer. LIMIT 30 days for
-        Advanced/Advanced+/Enterprise)**
-      operationId: returns-historical-observations--given-a-city-id-limit-1-day-for-low-volume-plans-limit-7-days-for-b
-      x-api-path-slug: historyhourlycity-idcity-id-get
-      parameters:
-      - in: query
-        name: callback
-        description: Wraps return in jsonp callback
-      - in: path
-        name: city_id
-        description: City ID
-      - in: query
-        name: end_date
-        description: End Date (YYYY-MM-DD or YYYY-MM-DD:HH)
-      - in: query
-        name: key
-        description: Your registered API key
-      - in: query
-        name: lang
-        description: 'Language (Default: English) See language field description'
-      - in: query
-        name: start_date
-        description: Start Date (YYYY-MM-DD or YYYY-MM-DD:HH)
-      - in: query
-        name: units
-        description: Convert to units
-      responses:
-        200:
-          description: OK
-      tags:
-      - Weather
-      - History
-      - Hourly
-      - City
-      - ""
-      - City
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---
